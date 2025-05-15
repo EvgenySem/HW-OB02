@@ -3,6 +3,8 @@ class User:
         self.__user_id = user_id
         self.__name = name
         self.__access = 'user'
+        user_list[user_id] = self
+        print(f'Пользователь {name} добавлен под id {user_id}')
 
 
     def set_admin(self):
@@ -50,3 +52,5 @@ admin1.remove_user('212345')
 print(user_list)
 print(admin1.get_user_info('12345'))
 print(admin1.get_user_info('212346'))
+
+user_list['212348'] = User('212348', 'Виталий Скворцов')
